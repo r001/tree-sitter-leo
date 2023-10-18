@@ -1,0 +1,67 @@
+=========
+function declaration
+=========
+
+program test.aleo {
+	transition a(s: signature, a: address, v: field) {
+		f(1u32);
+		signature::verify(s, a, v);
+	}
+	function f(a: u32) -> u32{}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        (function_parameters
+          (function_parameter
+            (identifier)
+            (type
+              (record_type
+                (identifier))))
+          (function_parameter
+            (identifier)
+            (type
+              (address_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (field_type))))
+        body: (block
+          (expression_statement
+            (free_function_call
+              (identifier)
+              (function_arguments
+                (unsigned_literal))))
+          (expression_statement
+            (associated_function_call
+              (named_type
+                (record_type
+                  (identifier)))
+              (identifier)
+              (function_arguments
+                (variable
+                  (identifier))
+                (variable
+                  (identifier))
+                (variable
+                  (identifier))))))))
+    (program_item
+      (function_declaration
+        name: (identifier)
+        (function_parameters
+          (function_parameter
+            (identifier)
+            (type
+              (unsigned_type))))
+				(return_arrow)
+        (type
+          (unsigned_type))
+        (block)))))

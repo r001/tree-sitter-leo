@@ -1,0 +1,19 @@
+=========
+comment
+=========
+
+// comment
+/* comment1 */
+program comment.aleo {
+
+}
+
+---------
+
+(source_file
+  (comment)
+  (comment)
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))))

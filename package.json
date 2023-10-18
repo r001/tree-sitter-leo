@@ -1,0 +1,35 @@
+{
+  "name": "tree-sitter-leo",
+  "version": "1.0.0",
+  "description": "Tree-sitter parser and highlighter for aleo.org leo language.",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "author": "Robert Horvath",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.18.0",
+    "node-gyp": "^9.4.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp build",
+    "lint": "eslint grammar.js",
+    "test": "tree-sitter test && tree-sitter parse examples/* --quiet --time",
+    "test-windows": "tree-sitter test"
+  },
+	"tree-sitter": [
+		{
+      "scope": "source.leo",
+      "file-types": [
+        "leo"
+      ],
+			"highlights": [
+        "queries/highlights.scm"
+      ]
+		}
+  ]
+}

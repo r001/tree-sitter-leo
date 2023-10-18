@@ -1,0 +1,26 @@
+=========
+associated_constant
+=========
+
+program literals.aleo {
+	transition a(){
+		group::GEN;
+	}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            (associated_constant
+              (named_type
+                (group_type))
+              (identifier))))))))

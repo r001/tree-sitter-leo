@@ -1,0 +1,175 @@
+=========
+types
+=========
+
+program literals.aleo {
+record T {
+	a: u8,
+	b: i8,
+	c: field,
+	d: group,
+	e: scalar,
+	f: bool,
+	g: address,
+	h: (),
+	i: other.leo/Inner, 
+	j: other.leo/Inner1.record, 
+	k: (u8,i8,scalar,group,field)
+}
+
+	transition a(){
+		let a : T = T {
+			a: 1u8,
+			b: -1i8,
+			c: 0field,
+			d: (0,_)group,
+			e: 0scalar,
+			f: false,
+			g: aleo1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,
+			i: other.leo/Inner { a: 1u8},
+			i: other.leo/Inner1 { b: -1i8},
+			k: (0u8, 1i8, 0scalar, 1group, 0field)
+		}; 
+	}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (record_declaration
+        (identifier)
+        (struct_component_declarations
+          (struct_component_declaration
+            (identifier)
+            (type
+              (unsigned_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (signed_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (field_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (group_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (scalar_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (boolean_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (address_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (unit_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (record_type
+                (locator
+                  (program_id
+                    name: (identifier)
+                    extension: (identifier))
+                  (identifier)))))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (record_type
+                (locator
+                  (program_id
+                    name: (identifier)
+                    extension: (identifier))
+                  (identifier)))))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (tuple_type
+                (type
+                  (unsigned_type))
+                (type
+                  (signed_type))
+                (type
+                  (scalar_type))
+                (type
+                  (group_type))
+                (type
+                  (field_type))))))))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (record_type
+                (identifier)))
+            (struct_expression
+              (identifier)
+              (struct_component_initializer
+                (identifier)
+                (unsigned_literal))
+              (struct_component_initializer
+                (identifier)
+                unary_expression: (signed_literal))
+              (struct_component_initializer
+                (identifier)
+                (field_literal))
+              (struct_component_initializer
+                (identifier)
+                (affine_group_literal
+                  (group_coordinate)
+                  (group_coordinate)))
+              (struct_component_initializer
+                (identifier)
+                (scalar_literal))
+              (struct_component_initializer
+                (identifier)
+                (boolean_literal))
+              (struct_component_initializer
+                (identifier)
+                (address_literal))
+              (struct_component_initializer
+                (identifier)
+                multiplicative_expression: (struct_component_expression
+                  (variable
+                    (identifier))
+                  (identifier))
+                multiplicative_expression: (struct_expression
+                  (identifier)
+                  (struct_component_initializer
+                    (identifier)
+                    (unsigned_literal))))
+              (struct_component_initializer
+                (identifier)
+                multiplicative_expression: (struct_component_expression
+                  (variable
+                    (identifier))
+                  (identifier))
+                multiplicative_expression: (struct_expression
+                  (identifier)
+                  (struct_component_initializer
+                    (identifier)
+                    unary_expression: (signed_literal))))
+              (struct_component_initializer
+                (identifier)
+                (tuple_expression
+                  (unsigned_literal)
+                  (signed_literal)
+                  (scalar_literal)
+                  (product_group_literal)
+                  (field_literal))))))))))

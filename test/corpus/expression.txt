@@ -1,0 +1,536 @@
+=========
+Unit tuple struct expression
+=========
+
+program test.aleo {
+
+	struct Struct {
+		a: u32
+	}
+
+	transition a(s: signature, a: address, v: field){
+	
+	();
+
+	(
+	 aleo1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,
+	 0group,
+	 1scalar,
+	 5u32+5u32
+	);
+
+	Struct {a: 5u32 };
+	}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (struct_declaration
+        name: (identifier)
+        (struct_component_declarations
+          (struct_component_declaration
+            (identifier)
+            (type
+              (unsigned_type))))))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        (function_parameters
+          (function_parameter
+            (identifier)
+            (type
+              (record_type
+                (identifier))))
+          (function_parameter
+            (identifier)
+            (type
+              (address_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (field_type))))
+        body: (block
+          (expression_statement
+            (unit_expression))
+          (expression_statement
+            (tuple_expression
+              (address_literal)
+              (product_group_literal)
+              (scalar_literal)
+              additive_expression: (unsigned_literal)
+              additive_expression: (unsigned_literal)))
+          (expression_statement
+            (struct_expression
+              (identifier)
+              (struct_component_initializer
+                (identifier)
+                (unsigned_literal)))))))))
+=========
+self.caller and block.height
+=========
+
+program test.aleo {
+
+	transition a(){
+		self.caller;	
+	} 
+	finalize a() {
+		block.height;
+	}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            (self_caller)))
+        (finalizer
+          name: (identifier)
+          body: (block
+            (expression_statement
+              (block_height))))))))
+
+=========
+Tuple component & struct component expression
+=========
+
+
+program test.aleo {
+	
+	struct Struct {
+		a: field,
+		b: group,
+	}
+
+	transition a(){
+		let b: (scalar, u32) = (5scalar, 3u32);
+		let c: Struct = Struct {a: 0field, b: 0group};
+	} 
+
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (struct_declaration
+        name: (identifier)
+        (struct_component_declarations
+          (struct_component_declaration
+            (identifier)
+            (type
+              (field_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (group_type))))))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (tuple_type
+                (type
+                  (scalar_type))
+                (type
+                  (unsigned_type))))
+            (tuple_expression
+              (scalar_literal)
+              (unsigned_literal)))
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (record_type
+                (identifier)))
+            (struct_expression
+              (identifier)
+              (struct_component_initializer
+                (identifier)
+                (field_literal))
+              (struct_component_initializer
+                (identifier)
+                (product_group_literal)))))))))
+=========
+unary expression
+=========
+
+program test.aleo {
+
+	transition a(){
+		let a: i32 = -1i32;
+		let b: bool = true;
+		-a;
+		!b;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (signed_type))
+            unary_expression: (signed_literal))
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (boolean_type))
+            (boolean_literal))
+          (expression_statement
+            unary_expression: (variable
+              (identifier)))
+          (expression_statement
+            unary_expression: (variable
+              (identifier))))))))
+
+
+=========
+exponential expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 ** 5u64;
+	} 
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            exponential_expression: (unsigned_literal)
+            exponential_expression: (unsigned_literal)))))))
+=========
+multiplicative expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 * 5u64 / 2u64;
+	} 
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            multiplicative_expression: (unsigned_literal)
+            multiplicative_expression: (unsigned_literal)
+            multiplicative_expression: (unsigned_literal)))))))
+
+=========
+additive expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 + 5u64 - 2u64;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            additive_expression: (unsigned_literal)
+            additive_expression: (unsigned_literal)
+            additive_expression: (unsigned_literal)))))))
+
+=========
+shift expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 << 5u64 >> 2u64;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            shift_expression: (unsigned_literal)
+            shift_expression: (unsigned_literal)
+            shift_expression: (unsigned_literal)))))))
+
+=========
+bitwise and expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 & 5u64;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            conjunctive_expression: (unsigned_literal)
+            conjunctive_expression: (unsigned_literal)))))))
+
+=========
+bitwise or expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 | 5u64;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            disjunctive_expression: (unsigned_literal)
+            disjunctive_expression: (unsigned_literal)))))))
+=========
+bitwise xor expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 ^ 5u64;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            exclusive_disjunctive_expression: (unsigned_literal)
+            exclusive_disjunctive_expression: (unsigned_literal)))))))
+=========
+ordering expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 < 5u64;
+		2u64 > 5u64;
+		2u64 <= 5u64;
+		2u64 >= 5u64;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            ordering_expression: (unsigned_literal)
+            ordering_expression: (unsigned_literal))
+          (expression_statement
+            ordering_expression: (unsigned_literal)
+            ordering_expression: (unsigned_literal))
+          (expression_statement
+            ordering_expression: (unsigned_literal)
+            ordering_expression: (unsigned_literal))
+          (expression_statement
+            ordering_expression: (unsigned_literal)
+            ordering_expression: (unsigned_literal)))))))
+=========
+equality expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		2u64 == 5u64;
+		2u64 != 5u64;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            equality_expression: (unsigned_literal)
+            equality_expression: (unsigned_literal))
+          (expression_statement
+            equality_expression: (unsigned_literal)
+            equality_expression: (unsigned_literal)))))))
+=========
+logical and expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		true && false;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            conditional_conjunctive_expression: (boolean_literal)
+            conditional_conjunctive_expression: (boolean_literal)))))))
+=========
+logical or expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		true || false;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            conditional_disjunctive_expression: (boolean_literal)
+            conditional_disjunctive_expression: (boolean_literal)))))))
+
+=========
+ternary expression
+=========
+
+program test.aleo {
+
+	transition a() {
+		true ? 1u32 : 2u32;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            (ternary_expression
+              (boolean_literal)
+              (ternary_if)
+              (unsigned_literal)
+              (ternary_else)
+              (unsigned_literal))))))))
