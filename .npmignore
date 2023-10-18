@@ -1,0 +1,8 @@
+build
+bindings/node/*
+bindings/rust/*
+node_modules
+src
+binding.gyp
+Cargo.lock
+Cargo.toml
