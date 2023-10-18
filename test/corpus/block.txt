@@ -1,0 +1,343 @@
+=========
+Return statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		return then finalize (0field);
+	} 
+	finalize a(b: field) {}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (return_statement
+            (function_arguments
+              (field_literal))))
+        (finalizer
+          name: (identifier)
+          (function_parameters
+            (function_parameter
+              (identifier)
+              (type
+                (field_type))))
+          body: (block))))))
+
+=========
+Expression statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		5u32 + 5u32;
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            additive_expression: (unsigned_literal)
+            additive_expression: (unsigned_literal)))))))
+=========
+Variable declaration statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		let a : () = ();
+	} 
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (unit_type))
+            (unit_expression)))))))
+=========
+Conditional statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		if true {} else {}
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (conditional_statement
+            (branch
+              (boolean_literal)
+              (block))
+            (block)))))))
+=========
+Loop statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		for i : i64 in -1i64 .. 5i64 {}
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (loop_statement
+            (identifier)
+            (type
+              (signed_type))
+            unary_expression: (signed_literal)
+            (signed_literal)
+            (block)))))))
+=========
+Assignment statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		let a: i8 = 0i8;
+		let b: i8 = 1i8;
+		let conditional: bool = false;
+		a = b;
+		a += 2i8;
+		a -= 1i8;
+	  a	*= 5i8;
+	  a	/= 5i8;
+	  a	%= 3i8;
+		a	**= 1i8;
+		a	<<=2i8;
+		a >>=2i8;
+		a	&= 3i8;
+		a	|= 0i8;
+		a	^= 0i8;
+		conditional	&&= true;
+		conditional	||= false;
+	} 
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (signed_type))
+            (signed_literal))
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (signed_type))
+            (signed_literal))
+          (variable_declaration
+            (identifier_or_identifiers
+              (identifier))
+            (type
+              (boolean_type))
+            (boolean_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (variable
+              (identifier)))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (signed_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (boolean_literal))
+          (assignment_statement
+            (variable
+              (identifier))
+            (assignment_operator)
+            (boolean_literal)))))))
+
+=========
+Assert statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		assert(true);
+		assert_eq(1u32, 1u32);
+		assert_neq(1u32, 1u32);
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (assert_statement
+            (assert_call
+              (boolean_literal)))
+          (assert_statement
+            (assert_equal_call
+              (unsigned_literal)
+              (unsigned_literal)))
+          (assert_statement
+            (assert_not_equal_call
+              (unsigned_literal)
+              (unsigned_literal))))))))
+=========
+Block statement
+=========
+
+program test.aleo {
+
+	transition a() {
+		{}
+		{
+			{}
+			{
+				{{}}
+			}
+			{
+				{{{}}}
+			}
+		} 
+	} 
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (block)
+          (block
+            (block)
+            (block
+              (block
+                (block)))
+            (block
+              (block
+                (block
+                  (block))))))))))

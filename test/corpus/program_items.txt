@@ -1,0 +1,377 @@
+=========
+Function declaration
+=========
+
+program test.aleo {
+
+	function a(){}
+	function a() -> ()  {}
+	function a() -> u32 {}
+	function b(e: i32, f: field, g: group)
+		-> (i32, field, group){
+		}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (function_declaration
+        name: (identifier)
+        (block)))
+    (program_item
+      (function_declaration
+        name: (identifier)
+        (return_arrow)
+        (type
+          (unit_type))
+        (block)))
+    (program_item
+      (function_declaration
+        name: (identifier)
+        (return_arrow)
+        (type
+          (unsigned_type))
+        (block)))
+    (program_item
+      (function_declaration
+        name: (identifier)
+        (function_parameters
+          (function_parameter
+            (identifier)
+            (type
+              (signed_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (field_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (group_type))))
+        (return_arrow)
+        (type
+          (tuple_type
+            (type
+              (signed_type))
+            (type
+              (field_type))
+            (type
+              (group_type))))
+        (block)))))
+=========
+Transition declaration
+=========
+
+program test.aleo {
+
+	transition a(){}
+	transition a() -> ()  {}
+	transition a() -> u32 {}
+	transition b(e: i32, f: field, g: group)
+		-> (i32, field, group){
+		}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block)))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        (return_arrow)
+        (type
+          (unit_type))
+        body: (block)))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        (return_arrow)
+        (type
+          (unsigned_type))
+        body: (block)))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        (function_parameters
+          (function_parameter
+            (identifier)
+            (type
+              (signed_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (field_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (group_type))))
+        (return_arrow)
+        (type
+          (tuple_type
+            (type
+              (signed_type))
+            (type
+              (field_type))
+            (type
+              (group_type))))
+        body: (block)))))
+
+=========
+Inline declaration
+=========
+
+program test.aleo {
+
+	inline a(){}
+	inline a() -> ()  {}
+	inline a() -> u32 {}
+	inline b(e: i32, f: field, g: group)
+		-> (i32, field, group){
+		}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (inline_declaration
+        name: (identifier)
+        (block)))
+    (program_item
+      (inline_declaration
+        name: (identifier)
+        (return_arrow)
+        (type
+          (unit_type))
+        (block)))
+    (program_item
+      (inline_declaration
+        name: (identifier)
+        (return_arrow)
+        (type
+          (unsigned_type))
+        (block)))
+    (program_item
+      (inline_declaration
+        name: (identifier)
+        (function_parameters
+          (function_parameter
+            (identifier)
+            (type
+              (signed_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (field_type)))
+          (function_parameter
+            (identifier)
+            (type
+              (group_type))))
+        (return_arrow)
+        (type
+          (tuple_type
+            (type
+              (signed_type))
+            (type
+              (field_type))
+            (type
+              (group_type))))
+        (block)))))
+=========
+Struct declaration
+=========
+
+program test.aleo {
+
+	struct Struct {
+    a: u32,
+	}
+	struct Struct {
+		a: u32,
+		b: field,
+		c: group,
+		d: scalar,
+	}
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (struct_declaration
+        name: (identifier)
+        (struct_component_declarations
+          (struct_component_declaration
+            (identifier)
+            (type
+              (unsigned_type))))))
+    (program_item
+      (struct_declaration
+        name: (identifier)
+        (struct_component_declarations
+          (struct_component_declaration
+            (identifier)
+            (type
+              (unsigned_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (field_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (group_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (scalar_type))))))))
+=========
+Record declaration
+=========
+
+program test.aleo {
+
+	record Record1 {
+    a: u32,
+	}
+	record Record2 {
+		a: u32,
+		b: field,
+		c: group,
+		d: scalar,
+	}
+}
+
+---------
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (record_declaration
+        (identifier)
+        (struct_component_declarations
+          (struct_component_declaration
+            (identifier)
+            (type
+              (unsigned_type))))))
+    (program_item
+      (record_declaration
+        (identifier)
+        (struct_component_declarations
+          (struct_component_declaration
+            (identifier)
+            (type
+              (unsigned_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (field_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (group_type)))
+          (struct_component_declaration
+            (identifier)
+            (type
+              (scalar_type))))))))
+
+=========
+Mapping declaration
+=========
+
+program test.aleo {
+
+mapping a: u64 => u32;
+mapping b: address => u64;
+mapping b: field => group;
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (mapping_declaration
+        (identifier)
+        (type
+          (unsigned_type))
+        (type
+          (unsigned_type))))
+    (program_item
+      (mapping_declaration
+        (identifier)
+        (type
+          (address_type))
+        (type
+          (unsigned_type))))
+    (program_item
+      (mapping_declaration
+        (identifier)
+        (type
+          (field_type))
+        (type
+          (group_type))))))
+=========
+Const declaration
+=========
+
+program test.aleo {
+
+const a: u32 = 1u32;
+const b: u64 = 2u64 + 2u64;
+const b: group = 1group + 5group;
+}
+
+---------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (constant_declaration
+        (identifier)
+        (type
+          (unsigned_type))
+        (unsigned_literal)))
+    (program_item
+      (constant_declaration
+        (identifier)
+        (type
+          (unsigned_type))
+        additive_expression: (unsigned_literal)
+        additive_expression: (unsigned_literal)))
+    (program_item
+      (constant_declaration
+        (identifier)
+        (type
+          (group_type))
+        additive_expression: (product_group_literal)
+        additive_expression: (product_group_literal)))))

@@ -1,0 +1,75 @@
+=========
+literals
+=========
+
+program literals.aleo {
+	transition a(){
+	1u8;
+	1u16;
+	1u32;
+	1u64;
+	1u128;
+	1i8;
+	1i32;
+	1i64;
+	1i128;
+	0field;
+	8444461749428370424248824938781546531375899335154063827935233455917409239040field;
+	0group;
+	1540945439182663264862696551825005342995406165131907382295858612069623286213group;
+	0scalar;
+	2111115437357092606062206234695386632838870926408408195193685246394721360382scalar;
+	true;
+	false;
+	aleo1ezamst4pjgj9zfxqq0fwfj8a4cjuqndmasgata3hggzqygggnyfq6kmyd4;
+	}
+}
+
+--------
+
+(source_file
+  (program_declaration
+    (program_id
+      name: (identifier)
+      extension: (identifier))
+    (program_item
+      (transition_declaration
+        name: (identifier)
+        body: (block
+          (expression_statement
+            (unsigned_literal))
+          (expression_statement
+            (unsigned_literal))
+          (expression_statement
+            (unsigned_literal))
+          (expression_statement
+            (unsigned_literal))
+          (expression_statement
+            (unsigned_literal))
+          (expression_statement
+            (signed_literal))
+          (expression_statement
+            (signed_literal))
+          (expression_statement
+            (signed_literal))
+          (expression_statement
+            (signed_literal))
+          (expression_statement
+            (field_literal))
+          (expression_statement
+            (field_literal))
+          (expression_statement
+            (product_group_literal))
+          (expression_statement
+            (product_group_literal))
+          (expression_statement
+            (scalar_literal))
+          (expression_statement
+            (scalar_literal))
+          (expression_statement
+            (boolean_literal))
+          (expression_statement
+            (boolean_literal))
+          (expression_statement
+            (address_literal)))))))
+
