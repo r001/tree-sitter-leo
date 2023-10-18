@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-leo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tree-sitter parser and highlighter for aleo.org leo language.",
   "main": "bindings/node",
   "scripts": {
