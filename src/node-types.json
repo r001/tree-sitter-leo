@@ -23014,11 +23014,11 @@
       "required": true,
       "types": [
         {
-          "type": "program_id",
+          "type": "program_item",
           "named": true
         },
         {
-          "type": "program_item",
+          "type": "this_program_id",
           "named": true
         }
       ]
@@ -23033,7 +23033,7 @@
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "leo_literal",
             "named": true
           }
         ]
@@ -32304,6 +32304,32 @@
     "fields": {}
   },
   {
+    "type": "this_program_id",
+    "named": true,
+    "fields": {
+      "extension": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "aleo_literal",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "transition_declaration",
     "named": true,
     "fields": {
@@ -39406,6 +39432,10 @@
     "named": false
   },
   {
+    "type": "aleo_literal",
+    "named": true
+  },
+  {
     "type": "assert",
     "named": false
   },
@@ -39516,6 +39546,10 @@
   {
     "type": "inline",
     "named": false
+  },
+  {
+    "type": "leo_literal",
+    "named": true
   },
   {
     "type": "let",

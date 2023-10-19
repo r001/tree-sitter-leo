@@ -955,6 +955,39 @@
         }
       ]
     },
+    "aleo_literal": {
+      "type": "STRING",
+      "value": "aleo"
+    },
+    "leo_literal": {
+      "type": "STRING",
+      "value": "leo"
+    },
+    "this_program_id": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "."
+        },
+        {
+          "type": "FIELD",
+          "name": "extension",
+          "content": {
+            "type": "SYMBOL",
+            "name": "aleo_literal"
+          }
+        }
+      ]
+    },
     "program_id": {
       "type": "SEQ",
       "members": [
@@ -975,7 +1008,7 @@
           "name": "extension",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "leo_literal"
           }
         }
       ]
@@ -3693,7 +3726,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "program_id"
+          "name": "this_program_id"
         },
         {
           "type": "STRING",

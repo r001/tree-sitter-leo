@@ -301,11 +301,21 @@ module.exports = grammar({
 			',', '.', '..', ';', ':', '::', '?',
 			'->', '=>', '_'
 		),
+
+		aleo_literal: $ => 'aleo',
 		
+		leo_literal: $ => 'leo',
+		
+		this_program_id: $ => seq(
+			field('name',$.identifier),
+			'.',
+			field('extension',$.aleo_literal),
+		),
+
 		program_id: $ => seq(
 			field('name',$.identifier),
 			'.',
-			field('extension',$.identifier),
+			field('extension',$.leo_literal),
 		),
 
 		locator: $ => seq(
@@ -1001,7 +1011,6 @@ module.exports = grammar({
 			'record', $.identifier, '{', $.struct_component_declarations, '}'
 		),
 
-
 		mapping_declaration: $ => seq(
 			'mapping', $.identifier, ':', $.type, '=>', $.type, ';'
 		),
@@ -1017,7 +1026,7 @@ module.exports = grammar({
 		),
 
 		program_declaration: $ => seq(
-			'program', $.program_id, '{', repeat($.program_item), '}'
+			'program', $.this_program_id, '{', repeat($.program_item), '}'
 		),
 
 		import_declaration: $ => seq(
