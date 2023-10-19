@@ -21,6 +21,14 @@
 ] @keyword
 
 [
+	"constant"
+	"public"
+	"private"
+] @type.qualifier
+
+"self" @variable.builtin
+
+[
  "transition"
  "function"
  "inline"
@@ -28,10 +36,9 @@
 
 "import" @include
 
-[
- "return"
- (return_arrow)
-] @keyword.return
+"return" @keyword.return
+
+ (return_arrow) @punctuation.delimiter
 
 "for" @repeat
 
@@ -98,7 +105,7 @@
 
 ] @operator
 
-(comment) @comment
+(comment) @comment @spell
 
 (boolean_literal) @boolean
 
@@ -108,14 +115,14 @@
 [
  (this_program_id)
  (program_id)
-] @string
+] @string.special
 
 ;record declaration
-(record_declaration (identifier) @type) 
+(record_declaration (identifier) @field) 
 
 ;struct component 
 (struct_component_declaration 
-  (identifier) @field) 
+  (identifier) @field)
 
 (type) @type
 
@@ -135,25 +142,25 @@
 	(identifier) @field))
 
 (transition_declaration
-  name: (identifier) @function)
+  name: (identifier) @function.builtin)
 
+;external transition call
+;will be wrong for internal function calls!
 (free_function_call
-  (identifier)  @function ) 
+  (identifier) @function)
 
 (function_declaration
-  name: (identifier) @function.call)
+  name: (identifier) @function)
 
 (inline_declaration
   name: (identifier) @function.macro)
 
 (method_call
-  .
-  (_)
-  .
-  (identifier) @method)
+  . (_)
+  . (identifier) @method)
 
 (function_parameter
- (identifier) @parameter) 
+ (identifier) @parameter)
 
 (struct_declaration
   name: (identifier) @field)
@@ -164,17 +171,11 @@
 
 [ 
   (unsigned_literal) 
-
   (signed_literal) 
-
   (field_literal) 
-
   (product_group_literal) 
-
   (affine_group_literal) 
-
   (scalar_literal) 
-
   (address_literal)
 ] @number
 
