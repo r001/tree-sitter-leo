@@ -37,9 +37,9 @@ record T {
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (record_declaration
         (identifier)
@@ -83,7 +83,7 @@ record T {
                 (locator
                   (program_id
                     name: (identifier)
-                    extension: (identifier))
+                    extension: (leo_literal))
                   (identifier)))))
           (struct_component_declaration
             (identifier)
@@ -92,7 +92,7 @@ record T {
                 (locator
                   (program_id
                     name: (identifier)
-                    extension: (identifier))
+                    extension: (leo_literal))
                   (identifier)))))
           (struct_component_declaration
             (identifier)

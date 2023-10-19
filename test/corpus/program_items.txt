@@ -16,9 +16,9 @@ program test.aleo {
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (function_declaration
         name: (identifier)
@@ -81,9 +81,9 @@ program test.aleo {
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (transition_declaration
         name: (identifier)
@@ -147,9 +147,9 @@ program test.aleo {
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (inline_declaration
         name: (identifier)
@@ -215,9 +215,9 @@ program test.aleo {
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (struct_declaration
         name: (identifier)
@@ -266,9 +266,9 @@ program test.aleo {
 ---------
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (record_declaration
         (identifier)
@@ -313,9 +313,9 @@ mapping b: field => group;
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (mapping_declaration
         (identifier)
@@ -352,9 +352,9 @@ const b: group = 1group + 5group;
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (constant_declaration
         (identifier)

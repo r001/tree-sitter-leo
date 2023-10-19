@@ -14,6 +14,6 @@ program comment.aleo {
   (comment)
   (comment)
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))))
+      extension: (aleo_literal))))

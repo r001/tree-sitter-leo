@@ -1,4 +1,4 @@
-((identifier) @variable (#set! "priority" 95))
+(identifier) @variable 
 
 [
  "assert"
@@ -37,6 +37,12 @@
   "then"
   "else"
 ] @conditional
+
+[
+ (ternary_if)
+ (ternary_else)
+] @conditional.ternary
+
 
 [ ";" "," "::"] @punctuation.delimiter
 
@@ -93,47 +99,29 @@
 
 (boolean_literal) @boolean
 
-(ternary_expression
-  (_)
-  (ternary_if) @conditional
-  (_)
-  (ternary_else) @conditional
-  (_))
-
 (constant_declaration 
-  (identifier) @constant
-)
+  (identifier) @constant)
 
-;program name if with right extension "aleo" -> okay
-(program_declaration
-  (program_id 
-    name: (identifier) 
-    extension: (identifier) @ext (#eq? @ext "aleo")) @string
-)
-
-;program name if with not with extension "aleo" -> error
-(program_declaration
-  (program_id 
-    name: (identifier) 
-    extension: (identifier) @ext (#not-eq? @ext "aleo")) @punctuation.delimiter
-)
+[
+ (this_program_id)
+ (program_id)
+] @string
 
 ;record declaration
-(record_declaration (identifier) @structure) 
+(record_declaration (identifier) @field) 
 
 ;struct component 
 (struct_component_declaration 
-  (identifier) @parameter
-  (type)       @type
-) 
+  (identifier) @field) 
 
 (type) @type
 
 (associated_constant) @constant
 
-(self_caller) @constant
-
-(block_height) @constant
+[
+ (self_caller)
+ (block_height)
+] @constant.builtin
 
 (transition_declaration
   .
@@ -183,82 +171,29 @@
 )
 
 (method_call
+  .
   (_)
-  (identifier) @method
-)
+  .
+  (identifier) @method)
 
 (function_parameter
- (identifier) @parameter
-) 
+ (identifier) @parameter) 
 
 (struct_declaration
-  name: (identifier) @structure)
+  name: (identifier) @field)
 
-(unsigned_literal) @number
+[ 
+  (unsigned_literal) 
 
-(signed_literal) @number
+  (signed_literal) 
 
-(field_literal) @number
+  (field_literal) 
 
-(product_group_literal) @number
+  (product_group_literal) 
 
-(affine_group_literal) @number
+  (affine_group_literal) 
 
-(scalar_literal) @number
+  (scalar_literal) 
 
-(boolean_literal) @boolean
-
-(address_literal) @number
-
-
-;address with wrong length or characters -> error
-((identifier) @address
- (#match? @address "^aleo1.*$")
- (#not-match? @address "aleo1[a-z0-9]{58}"
- )) @punctuation.delimiter 
-
-
-;external transition call locator if "leo" extension used -> okay
-(struct_component_expression
-  (_)
-  (identifier) @leo 
-  (#eq? @leo "leo")
-) @string
-
-;external transition call locator if "leo" is used as extension -> okay
-(locator
-  (program_id
-    name: (identifier)
-    extension: (identifier) @ext
-    (#eq? @ext "leo")
-  ) @string
-) 
-
-;external transition call locator if NOT "leo" is used as extension -> error
-(locator
-  (program_id
-    name: (identifier)
-    extension: (identifier) @ext
-    (#not-eq? @ext "leo")
-  ) @punctuation.delimiter
-) 
-
-;import declaration filename if "leo" is used as extension -> okay
-(import_declaration
-  (program_id
-    name: (identifier)
-    extension: (identifier) @ext
-    (#eq? @ext "leo")
-  ) @string
-)
-
-;import declaration filename if NOT "leo" used as extension -> error
-(import_declaration
-  (program_id
-    name: (identifier)
-    extension: (identifier) @ext
-    (#not-eq? @ext "leo")
-  ) @punctuation.delimiter
-) 
-
-
+  (address_literal)
+] @number

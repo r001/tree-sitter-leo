@@ -12,9 +12,9 @@ program literals.aleo {
 
 (source_file
   (program_declaration
-    (program_id
+    (this_program_id
       name: (identifier)
-      extension: (identifier))
+      extension: (aleo_literal))
     (program_item
       (transition_declaration
         name: (identifier)

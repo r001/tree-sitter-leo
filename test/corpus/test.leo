@@ -1,9 +1,12 @@
 program test.aleo {
 
-	function a(){}
-	function a() -> ()  {}
-	function a() -> u32 {}
-	function b(e: i32, f: field, g: group)
-		-> (i32, field, group){
-		}
+	record Record1 {
+    a: u32,
+	}
+	record Record2 {
+		a: u32,
+		b: field,
+		c: group,
+		d: scalar,
+	}
 }
