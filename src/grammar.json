@@ -989,29 +989,33 @@
       ]
     },
     "program_id": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
-          "name": "name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
+      "type": "PREC",
+      "value": 18,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "name",
+            "content": {
+              "type": "SYMBOL",
+              "name": "identifier"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "."
+          },
+          {
+            "type": "FIELD",
+            "name": "extension",
+            "content": {
+              "type": "SYMBOL",
+              "name": "leo_literal"
+            }
           }
-        },
-        {
-          "type": "STRING",
-          "value": "."
-        },
-        {
-          "type": "FIELD",
-          "name": "extension",
-          "content": {
-            "type": "SYMBOL",
-            "name": "leo_literal"
-          }
-        }
-      ]
+        ]
+      }
     },
     "locator": {
       "type": "SEQ",
@@ -1424,35 +1428,39 @@
       ]
     },
     "free_function_call": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "identifier"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "function_arguments"
-            }
-          ]
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "locator"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "function_arguments"
-            }
-          ]
-        }
-      ]
+      "type": "PREC",
+      "value": 18,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "function_arguments"
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "locator"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "function_arguments"
+              }
+            ]
+          }
+        ]
+      }
     },
     "associated_function_call": {
       "type": "SEQ",
@@ -3773,7 +3781,13 @@
       "value": "\\s"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "program_id",
+      "record_type",
+      "variable"
+    ]
+  ],
   "precedences": [],
   "externals": [],
   "inline": [],

@@ -31,6 +31,14 @@ module.exports = grammar({
 			/\s/	
 		],
 
+		conflicts: $ => [
+			[
+				$.program_id,
+				$.record_type,
+				$.variable
+			]
+		],
+
 	rules: {
 
 		source_file: $ => seq( 
@@ -312,10 +320,12 @@ module.exports = grammar({
 			field('extension',$.aleo_literal),
 		),
 
-		program_id: $ => seq(
-			field('name',$.identifier),
-			'.',
-			field('extension',$.leo_literal),
+		program_id: $ => prec(PREC.GROUP_LITERAL,
+			seq(
+				field('name',$.identifier),
+				'.',
+				field('extension',$.leo_literal),
+			)
 		),
 
 		locator: $ => seq(
@@ -456,14 +466,16 @@ module.exports = grammar({
 			$.identifier
 		),
 
-		free_function_call: $ => choice(
-			seq(
-				$.identifier,
-				$.function_arguments
-			),
-			seq(
-				$.locator,
-				$.function_arguments
+		free_function_call: $ => prec(PREC.GROUP_LITERAL,
+			choice(
+				seq(
+					$.identifier,
+					$.function_arguments
+				),
+				seq(
+					$.locator,
+					$.function_arguments
+				)
 			)
 		),
 

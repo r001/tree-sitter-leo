@@ -1,4 +1,4 @@
-(identifier) @variable 
+(variable) @variable
 
 [
  "assert"
@@ -28,7 +28,10 @@
 
 "import" @include
 
-"return" @keyword.return
+[
+ "return"
+ (return_arrow)
+] @keyword.return
 
 "for" @repeat
 
@@ -108,7 +111,7 @@
 ] @string
 
 ;record declaration
-(record_declaration (identifier) @field) 
+(record_declaration (identifier) @type) 
 
 ;struct component 
 (struct_component_declaration 
@@ -123,52 +126,25 @@
  (block_height)
 ] @constant.builtin
 
-(transition_declaration
-  .
-  name: (identifier) @function.bultin
-  .
-  (function_parameters)*
-  .
-  (return_arrow) @keyword.return
-  .
-  (type)
-  .
-  (block)
-  .
-)
+(free_function_call
+ (locator
+	(identifier) @function))
 
-;external transition call
-;will be wrong for internal function calls!
+(record_type
+ (locator
+	(identifier) @field))
+
+(transition_declaration
+  name: (identifier) @function)
+
 (free_function_call
   (identifier)  @function ) 
 
 (function_declaration
-  .
-  name: (identifier) @function
-  .
-  (function_parameters)*
-  .
-  (return_arrow) @keyword.return
-  .
-  (type)
-  .
-  (block)
-  .
-)
+  name: (identifier) @function.call)
 
 (inline_declaration
-  .
-  name: (identifier) @function
-  .
-  (function_parameters)*
-  .
-  (return_arrow) @keyword.return
-  .
-  (type)
-  .
-  (block)
-  .
-)
+  name: (identifier) @function.macro)
 
 (method_call
   .
@@ -181,6 +157,10 @@
 
 (struct_declaration
   name: (identifier) @field)
+
+(variable_declaration
+	(identifier_or_identifiers
+		(identifier) @variable))
 
 [ 
   (unsigned_literal) 
@@ -197,3 +177,5 @@
 
   (address_literal)
 ] @number
+
+(ERROR) @error
