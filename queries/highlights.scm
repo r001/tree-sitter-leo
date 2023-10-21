@@ -6,46 +6,47 @@
  "assert_neq"
  "block"
  "console"
- "const"
- "constant"
- "finalize"
  "in"
  "let"
  "mapping"
- "private"
  "program"
- "public"
  "record"
  "self"
  "struct"
 ] @keyword
 
 [
-	"constant"
-	"public"
-	"private"
-] @type.qualifier
+ "const"
+ "in"
+] @keyword.operator
+
+[
+ "constant"
+ "private"
+ "public"
+ ] @type.qualifier
 
 "self" @variable.builtin
 
 [
- "transition"
+ "finalize"
  "function"
  "inline"
+ "transition"
 ] @keyword.function
 
 "import" @include
 
 "return" @keyword.return
 
- (return_arrow) @punctuation.delimiter
+(return_arrow) @punctuation.delimiter
 
 "for" @repeat
 
 [ 
+  "else"
   "if"
   "then"
-  "else"
 ] @conditional
 
 [
@@ -113,8 +114,8 @@
   (identifier) @constant)
 
 [
- (this_program_id)
  (program_id)
+ (this_program_id)
 ] @string.special
 
 ;record declaration
@@ -129,8 +130,8 @@
 (associated_constant) @constant
 
 [
- (self_caller)
  (block_height)
+ (self_caller)
 ] @constant.builtin
 
 (free_function_call
@@ -146,8 +147,7 @@
 
 ;external transition call
 ;will be wrong for internal function calls!
-(free_function_call
-  (identifier) @function)
+  (identifier) @function.call)
 
 (function_declaration
   name: (identifier) @function)
@@ -157,7 +157,7 @@
 
 (method_call
   . (_)
-  . (identifier) @method)
+  . (identifier) @method.call)
 
 (function_parameter
  (identifier) @parameter)
@@ -170,11 +170,11 @@
 		(identifier) @variable))
 
 [ 
-  (unsigned_literal) 
-  (signed_literal) 
+  (address_literal)
+  (affine_group_literal) 
   (field_literal) 
   (product_group_literal) 
-  (affine_group_literal) 
   (scalar_literal) 
-  (address_literal)
+  (signed_literal) 
+  (unsigned_literal) 
 ] @number
