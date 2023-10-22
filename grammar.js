@@ -215,20 +215,36 @@ module.exports = grammar({
 
 		decimal_digit: $ =>  /[0-9]/,
 
-			nonzero_decimal_digit: $ => /[1-9]/,
+		nonzero_decimal_digit: $ => /[1-9]/,
 
-			identifier: $ => seq(
-				/[a-zA-Z]/,
-				repeat(
-					choice(
-						/[a-zA-Z]/,
-						/[0-9]/,
-						'_'
-					)	
-				)
-			),
+		constant_identifier: $ => seq(
+			/[A-Z]/,
+			repeat(
+				choice(
+					/[a-zA-Z]/,
+					/[0-9]/,
+					'_'
+				)	
+			)
+		),
+		variable_identifier: $ => seq(
+			/[a-z]/,
+			repeat(
+				choice(
+					/[a-zA-Z]/,
+					/[0-9]/,
+					'_'
+				)	
+			)
+		),
 
-			_numeral: $ => 
+		identifier: $ => choice(
+			$.constant_identifier,
+			$.variable_identifier
+		),
+
+
+		_numeral: $ => 
 		/([0-9]_*)+/,
 
 			tuple_index: $ => choice(
@@ -458,7 +474,9 @@ module.exports = grammar({
 		$.affine_group_literal
 		),
 
-		variable: $ => prec(2, $.identifier),
+		variable: $ => prec(2, choice(
+			$.variable_identifier,
+			$.constant_identifier)),
 
 		associated_constant: $ => seq(
 			$.named_type,

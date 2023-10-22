@@ -1,4 +1,5 @@
 (variable) @variable
+(variable_const) @constant
 
 [
  "assert"
@@ -6,18 +7,17 @@
  "assert_neq"
  "block"
  "console"
+ "const"
  "let"
  "mapping"
  "program"
  "record"
  "self"
  "struct"
+ "then"
 ] @keyword
 
-[
- "const"
- "in"
-] @keyword.operator
+ "in" @keyword.operator
 
 [
  "constant"
@@ -45,7 +45,6 @@
 [ 
   "else"
   "if"
-  "then"
 ] @conditional
 
 [
@@ -53,6 +52,7 @@
  (ternary_else)
 ] @conditional.ternary
 
+[ "(" ")" "{" "}" "[" "]" ] @punctuation.bracket
 
 [ ";" "," "::"] @punctuation.delimiter
 
@@ -144,6 +144,9 @@
 (transition_declaration
   name: (identifier) @function.builtin)
 
+(finalizer
+  name: (identifier) @function.builtin)
+
 (free_function_call
   (identifier) @function.call)
 
@@ -169,10 +172,12 @@
 
 [ 
   (address_literal)
-  (affine_group_literal) 
+  ((affine_group_literal) (#set! "priority" 101))
   (field_literal) 
   (product_group_literal) 
   (scalar_literal) 
   (signed_literal) 
   (unsigned_literal) 
 ] @number
+
+(annotation) @attribute
