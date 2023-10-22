@@ -13604,6 +13604,11 @@
     }
   },
   {
+    "type": "constant_identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "decimal_digit",
     "named": true,
     "fields": {}
@@ -18262,7 +18267,21 @@
   {
     "type": "identifier",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "constant_identifier",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "identifier_or_identifiers",
@@ -36981,7 +37000,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "constant_identifier",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
           "named": true
         }
       ]
@@ -39226,6 +39249,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "variable_identifier",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "!",
