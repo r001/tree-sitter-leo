@@ -1,5 +1,5 @@
-(variable) @variable
-(variable_const) @constant
+(variable_identifier) @variable
+(constant_identifier) @constant
 
 [
  "assert"
