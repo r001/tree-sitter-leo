@@ -23062,7 +23062,7 @@
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "program_name_literal",
             "named": true
           }
         ]
@@ -23107,6 +23107,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "program_name_literal",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "record_declaration",
@@ -32341,7 +32346,7 @@
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "program_name_literal",
             "named": true
           }
         ]
