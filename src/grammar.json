@@ -1005,6 +1005,35 @@
       "type": "STRING",
       "value": "leo"
     },
+    "program_name_literal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "[a-z]"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[a-zA-Z]"
+              },
+              {
+                "type": "PATTERN",
+                "value": "[0-9]"
+              },
+              {
+                "type": "STRING",
+                "value": "_"
+              }
+            ]
+          }
+        }
+      ]
+    },
     "this_program_id": {
       "type": "SEQ",
       "members": [
@@ -1013,7 +1042,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "program_name_literal"
           }
         },
         {
@@ -1041,7 +1070,7 @@
             "name": "name",
             "content": {
               "type": "SYMBOL",
-              "name": "identifier"
+              "name": "program_name_literal"
             }
           },
           {
@@ -3837,6 +3866,10 @@
       "program_id",
       "record_type",
       "variable"
+    ],
+    [
+      "program_name_literal",
+      "variable_identifier"
     ]
   ],
   "precedences": [],
