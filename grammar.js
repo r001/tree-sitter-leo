@@ -31,13 +31,17 @@ module.exports = grammar({
 			/\s/	
 		],
 
-		conflicts: $ => [
-			[
-				$.program_id,
-				$.record_type,
-				$.variable
-			]
+	conflicts: $ => [
+		[
+			$.program_id,
+			$.record_type,
+			$.variable
 		],
+		[ 
+			$.program_name_literal,
+			$.variable_identifier
+		]
+	],
 
 	rules: {
 
@@ -330,15 +334,26 @@ module.exports = grammar({
 		
 		leo_literal: $ => 'leo',
 		
+		program_name_literal: $ => seq(
+			/[a-z]/,
+			repeat(
+				choice(
+					/[a-zA-Z]/,
+					/[0-9]/,
+					'_'
+				)	
+			)
+		),
+
 		this_program_id: $ => seq(
-			field('name',$.identifier),
+			field('name',$.program_name_literal),
 			'.',
 			field('extension',$.aleo_literal),
 		),
 
 		program_id: $ => prec(PREC.GROUP_LITERAL,
 			seq(
-				field('name',$.identifier),
+				field('name',$.program_name_literal),
 				'.',
 				field('extension',$.leo_literal),
 			)
