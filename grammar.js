@@ -973,9 +973,7 @@ module.exports = grammar({
 			repeat($.annotation),
 			'function',
 			field("name", $.identifier),
-			'(',
 			optional($.function_parameters),
-			')',
 			optional(
 				seq(
 					$.return_arrow,
@@ -986,14 +984,16 @@ module.exports = grammar({
 		),
 
 	  function_parameters: $ => seq(
-			$.function_parameter,
+			"(",
+      $.function_parameter,
 			repeat(
 				seq(
 					',',
 					$.function_parameter
 				)
 			),
-			optional(',')
+			optional(','),
+      ")"
 		),	
 
 		function_parameter: $ => seq(
@@ -1005,9 +1005,7 @@ module.exports = grammar({
 			repeat($.annotation),
 			'inline',
 			field("name", $.identifier),
-			'(',
 			optional($.function_parameters),
-			')',
 			optional(
 				seq(
 					$.return_arrow,
@@ -1021,9 +1019,7 @@ module.exports = grammar({
 			repeat($.annotation),
 			'transition',
 			field('name', $.identifier),
-				'(',
 				optional($.function_parameters),
-				')',
 			optional(
 				seq(
 					$.return_arrow,
@@ -1046,9 +1042,7 @@ module.exports = grammar({
 		finalizer: $ => seq(
 			'finalize',
 			field('name',$.identifier),
-			'(',
 			optional($.function_parameters),
-			')',
 			optional(
 				seq(
 					$.return_arrow,
