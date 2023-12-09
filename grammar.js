@@ -887,7 +887,9 @@ module.exports = grammar({
 			)
 		),
 
-		branch: $ => seq('if', $._expression, $.block),
+    if_conditional: $ => $._expression,
+
+		branch: $ => seq('if', $.if_conditional, $.block),
 
 		conditional_statement: $ => choice(
 			$.branch,

@@ -2959,6 +2959,10 @@
         }
       ]
     },
+    "if_conditional": {
+      "type": "SYMBOL",
+      "name": "_expression"
+    },
     "branch": {
       "type": "SEQ",
       "members": [
@@ -2968,7 +2972,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_expression"
+          "name": "if_conditional"
         },
         {
           "type": "SYMBOL",
