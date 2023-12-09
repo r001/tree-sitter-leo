@@ -682,6 +682,7 @@ module.exports = grammar({
 				$.function_arguments
 			)
 		),
+    parenthesized_expression: $ => seq('(', $._expression, ')'),
 
 		_expression: $ => choice(
 			$.unsigned_literal,
@@ -695,7 +696,7 @@ module.exports = grammar({
 			$.affine_group_literal,
 			$.variable,
 			$.associated_constant,
-			prec(PREC.PARENS, seq('(', $._expression, ')')),
+			prec(PREC.PARENS, $.parenthesized_expression),
 			$.free_function_call,
 			$.associated_function_call,
 			$.unit_expression,
