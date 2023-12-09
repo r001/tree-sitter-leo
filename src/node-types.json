@@ -22026,6 +22026,21 @@
     }
   },
   {
+    "type": "items_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "program_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "line_terminator",
     "named": true,
     "fields": {},
@@ -27000,7 +27015,7 @@
       "required": true,
       "types": [
         {
-          "type": "program_item",
+          "type": "items_block",
           "named": true
         },
         {

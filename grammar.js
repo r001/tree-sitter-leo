@@ -1114,8 +1114,10 @@ module.exports = grammar({
 			$.constant_declaration
 		),
 
+    items_block: $ => seq('{', repeat($.program_item), '}'),
+
 		program_declaration: $ => seq(
-			'program', $.this_program_id, '{', repeat($.program_item), '}'
+			'program', $.this_program_id, $.items_block
 		),
 
 		import_declaration: $ => seq(
