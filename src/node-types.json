@@ -180,6 +180,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -363,6 +367,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -552,6 +560,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -735,6 +747,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -924,6 +940,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -1107,6 +1127,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -1296,6 +1320,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -1479,6 +1507,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -1668,6 +1700,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -1851,6 +1887,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -2040,6 +2080,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -2226,6 +2270,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -2330,6 +2378,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -2531,6 +2583,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -2714,6 +2770,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -2903,6 +2963,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -3086,6 +3150,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -3275,6 +3343,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -3458,6 +3530,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -3647,6 +3723,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -3830,6 +3910,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -4019,6 +4103,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -4202,6 +4290,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -4391,6 +4483,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -4577,6 +4673,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -4681,6 +4781,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -4867,6 +4971,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -5050,6 +5158,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -5239,6 +5351,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -5422,6 +5538,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -5611,6 +5731,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -5794,6 +5918,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -5983,6 +6111,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -6166,6 +6298,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -6355,6 +6491,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -6538,6 +6678,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -6727,6 +6871,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -6913,6 +7061,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -7017,6 +7169,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -7203,6 +7359,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -7386,6 +7546,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -7575,6 +7739,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -7758,6 +7926,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -7947,6 +8119,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -8130,6 +8306,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -8319,6 +8499,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -8502,6 +8686,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -8691,6 +8879,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -8874,6 +9066,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -9063,6 +9259,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -9249,6 +9449,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -9353,6 +9557,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -9567,6 +9775,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -9750,6 +9962,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -9939,6 +10155,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -10122,6 +10342,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -10311,6 +10535,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -10494,6 +10722,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -10683,6 +10915,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -10866,6 +11102,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -11055,6 +11295,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -11238,6 +11482,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -11427,6 +11675,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -11613,6 +11865,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -11721,6 +11977,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -12007,6 +12267,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -12190,6 +12454,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -12379,6 +12647,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -12562,6 +12834,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -12751,6 +13027,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -12934,6 +13214,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -13123,6 +13407,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -13306,6 +13594,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -13495,6 +13787,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -13678,6 +13974,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -13867,6 +14167,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -14053,6 +14357,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -14161,6 +14469,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -14375,6 +14687,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -14558,6 +14874,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -14747,6 +15067,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -14930,6 +15254,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -15119,6 +15447,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -15302,6 +15634,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -15491,6 +15827,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -15674,6 +16014,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -15863,6 +16207,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -16046,6 +16394,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -16235,6 +16587,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -16421,6 +16777,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -16529,6 +16889,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -16729,6 +17093,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -16912,6 +17280,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -17101,6 +17473,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -17284,6 +17660,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -17473,6 +17853,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -17656,6 +18040,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -17845,6 +18233,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -18028,6 +18420,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -18217,6 +18613,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -18400,6 +18800,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -18589,6 +18993,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -18775,6 +19183,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -18879,6 +19291,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -19166,6 +19582,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -19349,6 +19769,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -19538,6 +19962,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -19721,6 +20149,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -19910,6 +20342,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -20093,6 +20529,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -20282,6 +20722,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -20465,6 +20909,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -20654,6 +21102,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -20837,6 +21289,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -21026,6 +21482,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -21212,6 +21672,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -21316,6 +21780,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -21736,6 +22204,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -21919,6 +22391,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -22108,6 +22584,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -22291,6 +22771,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -22480,6 +22964,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -22663,6 +23151,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -22852,6 +23344,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -23035,6 +23531,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -23224,6 +23724,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -23407,6 +23911,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -23596,6 +24104,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -23782,6 +24294,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -23894,6 +24410,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -24103,6 +24623,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -24286,6 +24810,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -24475,6 +25003,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -24658,6 +25190,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -24847,6 +25383,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -25030,6 +25570,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -25219,6 +25763,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -25402,6 +25950,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -25591,6 +26143,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -25774,6 +26330,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -25963,6 +26523,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -26149,6 +26713,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -26261,6 +26829,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -26746,6 +27318,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -26929,6 +27505,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -27118,6 +27698,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -27301,6 +27885,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -27490,6 +28078,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -27673,6 +28265,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -27862,6 +28458,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -28045,6 +28645,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -28234,6 +28838,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -28417,6 +29025,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -28606,6 +29218,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -28792,6 +29408,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -28903,6 +29523,10 @@
           "named": true
         },
         {
+          "type": "self_signer",
+          "named": true
+        },
+        {
           "type": "signature_literal",
           "named": true
         },
@@ -28993,6 +29617,11 @@
   },
   {
     "type": "self_caller",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "self_signer",
     "named": true,
     "fields": {}
   },
@@ -29205,6 +29834,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -29388,6 +30021,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -29577,6 +30214,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -29760,6 +30401,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -29949,6 +30594,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -30132,6 +30781,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -30321,6 +30974,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -30504,6 +31161,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -30693,6 +31354,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -30876,6 +31541,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -31065,6 +31734,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -31251,6 +31924,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -31359,6 +32036,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -31545,6 +32226,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -31728,6 +32413,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -31917,6 +32606,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -32100,6 +32793,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -32289,6 +32986,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -32472,6 +33173,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -32661,6 +33366,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -32844,6 +33553,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -33033,6 +33746,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -33216,6 +33933,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -33405,6 +34126,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -33591,6 +34316,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -33699,6 +34428,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -33935,6 +34668,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -34118,6 +34855,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -34307,6 +35048,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -34490,6 +35235,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -34679,6 +35428,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -34862,6 +35615,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -35051,6 +35808,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -35234,6 +35995,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -35423,6 +36188,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -35606,6 +36375,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -35795,6 +36568,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -35981,6 +36758,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -36085,6 +36866,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -36380,6 +37165,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -36563,6 +37352,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -36752,6 +37545,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -36935,6 +37732,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -37124,6 +37925,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -37307,6 +38112,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -37496,6 +38305,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -37679,6 +38492,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -37868,6 +38685,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -38051,6 +38872,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -38240,6 +39065,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -38426,6 +39255,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -38530,6 +39363,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -38720,6 +39557,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -38903,6 +39744,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -39092,6 +39937,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -39275,6 +40124,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -39464,6 +40317,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -39647,6 +40504,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -39836,6 +40697,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -40019,6 +40884,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -40208,6 +41077,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -40391,6 +41264,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -40580,6 +41457,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -40766,6 +41647,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -40870,6 +41755,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {
@@ -41188,6 +42077,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -41371,6 +42264,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -41560,6 +42457,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -41743,6 +42644,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -41932,6 +42837,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -42115,6 +43024,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -42304,6 +43217,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -42487,6 +43404,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -42676,6 +43597,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -42859,6 +43784,10 @@
           },
           {
             "type": "self_caller",
+            "named": true
+          },
+          {
+            "type": "self_signer",
             "named": true
           },
           {
@@ -43048,6 +43977,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -43234,6 +44167,10 @@
             "named": true
           },
           {
+            "type": "self_signer",
+            "named": true
+          },
+          {
             "type": "signature_literal",
             "named": true
           },
@@ -43342,6 +44279,10 @@
         },
         {
           "type": "self_caller",
+          "named": true
+        },
+        {
+          "type": "self_signer",
           "named": true
         },
         {

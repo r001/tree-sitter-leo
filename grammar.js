@@ -476,7 +476,7 @@ module.exports = grammar({
 			$.record_type,
 			$.unit_type,
 			$.tuple_type,
-			$.array_type
+			$.array_type,
 		),
 
 		group_coordinate: $ => choice(
@@ -651,6 +651,7 @@ module.exports = grammar({
 			$.array_expression,
 			$.struct_expression,
 			$.self_caller,
+			$.self_signer,
 			$.block_height,
 			$.tuple_component_expression,
 			$.struct_component_expression,
@@ -702,6 +703,7 @@ module.exports = grammar({
 			$.array_expression,
 			$.struct_expression,
 			$.self_caller,
+			$.self_signer,
 			$.block_height,
 			$.tuple_component_expression,
 			$.struct_component_expression,

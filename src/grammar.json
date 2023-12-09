@@ -1998,6 +1998,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "self_signer"
+        },
+        {
+          "type": "SYMBOL",
           "name": "block_height"
         },
         {
@@ -2176,6 +2180,10 @@
         {
           "type": "SYMBOL",
           "name": "self_caller"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_signer"
         },
         {
           "type": "SYMBOL",
