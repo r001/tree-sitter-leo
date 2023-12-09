@@ -779,6 +779,19 @@
         }
       ]
     },
+    "signature_literal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sign"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[a-z0-9]{212}"
+        }
+      ]
+    },
     "annotation": {
       "type": "SEQ",
       "members": [
@@ -1188,6 +1201,10 @@
       "type": "STRING",
       "value": "address"
     },
+    "signature_type": {
+      "type": "STRING",
+      "value": "signature"
+    },
     "unit_type": {
       "type": "SEQ",
       "members": [
@@ -1295,6 +1312,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "signature_type"
+        },
+        {
+          "type": "SYMBOL",
           "name": "record_type"
         }
       ]
@@ -1344,6 +1365,31 @@
         }
       ]
     },
+    "array_type": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_numeral"
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        }
+      ]
+    },
     "type": {
       "type": "CHOICE",
       "members": [
@@ -1377,6 +1423,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "signature_type"
+        },
+        {
+          "type": "SYMBOL",
           "name": "record_type"
         },
         {
@@ -1386,6 +1436,10 @@
         {
           "type": "SYMBOL",
           "name": "tuple_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "array_type"
         }
       ]
     },
@@ -1679,6 +1733,39 @@
         }
       ]
     },
+    "array_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_expression"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        }
+      ]
+    },
     "struct_expression": {
       "type": "SEQ",
       "members": [
@@ -1775,6 +1862,27 @@
         ]
       }
     },
+    "self_signer": {
+      "type": "PREC",
+      "value": 17,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "self"
+          },
+          {
+            "type": "STRING",
+            "value": "."
+          },
+          {
+            "type": "STRING",
+            "value": "signer"
+          }
+        ]
+      }
+    },
     "block_height": {
       "type": "PREC",
       "value": 17,
@@ -1829,6 +1937,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "signature_literal"
+        },
+        {
+          "type": "SYMBOL",
           "name": "affine_group_literal"
         },
         {
@@ -1871,6 +1983,10 @@
         {
           "type": "SYMBOL",
           "name": "tuple_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "array_expression"
         },
         {
           "type": "SYMBOL",
@@ -1998,6 +2114,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "signature_literal"
+        },
+        {
+          "type": "SYMBOL",
           "name": "affine_group_literal"
         },
         {
@@ -2044,6 +2164,10 @@
         {
           "type": "SYMBOL",
           "name": "tuple_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "array_expression"
         },
         {
           "type": "SYMBOL",

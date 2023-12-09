@@ -306,6 +306,11 @@ module.exports = grammar({
 			/[a-z0-9]{58}/
 		),
 
+		signature_literal: $ => seq(
+			'sign',
+			/[a-z0-9]{212}/
+		),
+
 		annotation: $ => seq(
 			'@', $.identifier
 		),
@@ -396,6 +401,8 @@ module.exports = grammar({
 
 		address_type: $ => 'address',
 
+    signature_type: $ => 'signature',
+
 		unit_type: $ => seq(
 			"(",
 			")"
@@ -430,6 +437,7 @@ module.exports = grammar({
 			$.group_type,
 			$.scalar_type,
 			$.address_type,
+			$.signature_type,
 			$.record_type,
 		),
 
@@ -448,6 +456,14 @@ module.exports = grammar({
 			')'
 		),
 
+		array_type: $ => seq(
+      '[',
+      $.type,
+      ';',
+      $._numeral,
+      ']'
+		),
+
 		type: $ => choice(
 			$.unsigned_type,
 			$.signed_type,
@@ -456,9 +472,11 @@ module.exports = grammar({
 			$.scalar_type,
 			$.boolean_type,
 			$.address_type,
+			$.signature_type,
 			$.record_type,
 			$.unit_type,
-			$.tuple_type
+			$.tuple_type,
+			$.array_type
 		),
 
 		group_coordinate: $ => choice(
@@ -554,6 +572,18 @@ module.exports = grammar({
 		')'
 		),
 
+		array_expression: $ => seq(
+			'[',
+			$._expression,
+			repeat1(
+				seq(
+					',',
+					$._expression,
+				)
+			),
+		']'
+		),
+
 		struct_expression: $ => seq(
 			$.identifier,
 			'{',
@@ -585,6 +615,14 @@ module.exports = grammar({
 			)
 		),
 
+		self_signer: $ => prec(PREC.OBJ_ACCESS,
+			seq(
+				'self',
+				'.',
+				'signer'
+			)
+		),
+
 		block_height: $ => prec(PREC.OBJ_ACCESS,
 			seq(
 			'block',
@@ -601,6 +639,7 @@ module.exports = grammar({
 			$.scalar_literal,
 			$.boolean_literal,
 			$.address_literal,
+      $.signature_literal,
 			$.affine_group_literal,
 			$.variable,
 			$.associated_constant,
@@ -609,6 +648,7 @@ module.exports = grammar({
 			$.associated_function_call,
 			$.unit_expression,
 			$.tuple_expression,
+			$.array_expression,
 			$.struct_expression,
 			$.self_caller,
 			$.block_height,
@@ -650,6 +690,7 @@ module.exports = grammar({
 			$.scalar_literal,
 			$.boolean_literal,
 			$.address_literal,
+      $.signature_literal,
 			$.affine_group_literal,
 			$.variable,
 			$.associated_constant,
@@ -658,6 +699,7 @@ module.exports = grammar({
 			$.associated_function_call,
 			$.unit_expression,
 			$.tuple_expression,
+			$.array_expression,
 			$.struct_expression,
 			$.self_caller,
 			$.block_height,
