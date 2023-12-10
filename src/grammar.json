@@ -2963,10 +2963,6 @@
       "type": "SYMBOL",
       "name": "_expression"
     },
-    "if_conditional_end": {
-      "type": "STRING",
-      "value": ""
-    },
     "branch": {
       "type": "SEQ",
       "members": [
@@ -2977,10 +2973,6 @@
         {
           "type": "SYMBOL",
           "name": "if_conditional"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "if_conditional_end"
         },
         {
           "type": "SYMBOL",
