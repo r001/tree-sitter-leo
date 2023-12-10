@@ -11921,6 +11921,10 @@
         {
           "type": "if_conditional",
           "named": true
+        },
+        {
+          "type": "if_conditional_end",
+          "named": true
         }
       ]
     }
@@ -46226,6 +46230,10 @@
   {
     "type": "if",
     "named": false
+  },
+  {
+    "type": "if_conditional_end",
+    "named": true
   },
   {
     "type": "import",
