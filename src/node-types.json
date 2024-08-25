@@ -46140,6 +46140,10 @@
     "named": false
   },
   {
+    "type": "async",
+    "named": false
+  },
+  {
     "type": "block",
     "named": false
   },

@@ -32,11 +32,6 @@ module.exports = grammar({
     ],
 
   conflicts: $ => [
-    [
-      $.program_id,
-      $.record_type,
-      $.variable
-    ],
     [ 
       $.program_name_literal,
       $.variable_identifier
@@ -973,6 +968,7 @@ module.exports = grammar({
 
     function_declaration: $ => seq(
       repeat($.annotation),
+      optional('async'),
       'function',
       field("name", $.identifier),
       optional($.function_parameters),
@@ -1005,6 +1001,7 @@ module.exports = grammar({
 
     inline_declaration: $ => seq(
       repeat($.annotation),
+      optional('async'),
       'inline',
       field("name", $.identifier),
       optional($.function_parameters),
@@ -1019,6 +1016,7 @@ module.exports = grammar({
 
     transition_declaration: $ => seq(
       repeat($.annotation),
+      optional('async'),
       'transition',
       field('name', $.identifier),
         optional($.function_parameters),
