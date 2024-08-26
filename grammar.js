@@ -34,7 +34,7 @@ module.exports = grammar({
   conflicts: $ => [
     [ 
       $.program_name_literal,
-      $.variable_identifier
+      $._variable_identifier
     ]
   ],
 
@@ -44,6 +44,7 @@ module.exports = grammar({
       repeat($.import_declaration),
       $.program_declaration
     ),
+
     horizontal_tab: $ => /\t/,
     
     line_feed: $ => /\n/,
@@ -229,7 +230,8 @@ module.exports = grammar({
         )  
       )
     ),
-    variable_identifier: $ => seq(
+
+    _variable_identifier: $ => seq(
       /[a-z]/,
       repeat(
         choice(
@@ -242,7 +244,7 @@ module.exports = grammar({
 
     identifier: $ => choice(
       $.constant_identifier,
-      $.variable_identifier
+      $._variable_identifier
     ),
 
 
@@ -554,7 +556,7 @@ module.exports = grammar({
     ),
 
     variable: $ => prec(2, choice(
-      $.variable_identifier,
+      $._variable_identifier,
       $.constant_identifier)),
 
     associated_constant: $ => seq(
@@ -902,7 +904,7 @@ module.exports = grammar({
 
     variable_declaration:$ => seq(
       'let',
-      $.identifier_or_identifiers,
+      $._identifier_or_identifiers,
       ':',
       $.type,
       '=',
@@ -920,7 +922,7 @@ module.exports = grammar({
       ';'
     ),
 
-    identifier_or_identifiers:$ => choice(
+    _identifier_or_identifiers:$ => choice(
       $.identifier,
       seq(
         '(',
