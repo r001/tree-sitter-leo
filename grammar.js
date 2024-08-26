@@ -309,6 +309,20 @@ module.exports = grammar({
       /[a-z0-9]{212}/
     ),
 
+    string_literal: $ => seq(
+      '"',
+      repeat(
+        choice(
+          /[\x00-\x09]/,
+          /[\x0B-\x21]/,
+          /[\x23-\x7f]/,
+          $.safe_nonascii,
+          $.line_terminator,
+        )
+      ),
+      '"',
+    ),
+
     annotation: $ => seq(
       '@', $.identifier
     ),
@@ -672,6 +686,7 @@ module.exports = grammar({
       $.boolean_literal,
       $.address_literal,
       $.signature_literal,
+      $.string_literal,
       $.affine_group_literal,
       $.variable,
       $.associated_constant,
@@ -714,6 +729,7 @@ module.exports = grammar({
         $.function_arguments
       )
     ),
+
     parenthesized_expression: $ => seq('(', $._expression, ')'),
 
     _expression: $ => choice(
@@ -725,6 +741,7 @@ module.exports = grammar({
       $.boolean_literal,
       $.address_literal,
       $.signature_literal,
+      $.string_literal,
       $.affine_group_literal,
       $.variable,
       $.associated_constant,
