@@ -26484,6 +26484,10 @@
           "named": true
         },
         {
+          "type": "string_type",
+          "named": true
+        },
+        {
           "type": "untyped_future_type",
           "named": true
         }
@@ -31527,6 +31531,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "string_type",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "struct_component_declaration",
@@ -43536,6 +43545,10 @@
           "named": true
         },
         {
+          "type": "string_type",
+          "named": true
+        },
+        {
           "type": "tuple_type",
           "named": true
         },
@@ -46365,6 +46378,10 @@
   {
     "type": "space",
     "named": true
+  },
+  {
+    "type": "string",
+    "named": false
   },
   {
     "type": "struct",

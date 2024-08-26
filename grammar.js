@@ -204,6 +204,7 @@ module.exports = grammar({
       'return',
       'scalar',
       'self',
+      'string',
       'struct',
       'then',
       'transition',
@@ -400,6 +401,8 @@ module.exports = grammar({
 
     signature_type: $ => 'signature',
 
+    string_type: $ => 'string',
+
     unit_type: $ => seq(
       "(",
       ")"
@@ -463,6 +466,7 @@ module.exports = grammar({
       $.integer_type,
       $.scalar_type,
       $.signature_type,
+      $.string_type,
       $.untyped_future_type,
       $.identifier,
     ),
@@ -499,6 +503,7 @@ module.exports = grammar({
       $.boolean_type,
       $.address_type,
       $.signature_type,
+      $.string_type,
       $.record_type,
       $.unit_type,
       $.future_type,
