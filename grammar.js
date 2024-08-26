@@ -169,10 +169,12 @@ module.exports = grammar({
     ),
 
     keyword: $ => choice(
+      'Future',
       'address',
       'assert',
       'assert_eq',
       'assert_neq',
+      'async',
       'block',
       'bool',
       'console',
@@ -184,11 +186,11 @@ module.exports = grammar({
       'for',
       'function',
       'group',
-      'i8',
+      'i128',
       'i16',
       'i32',
       'i64',
-      'i128',
+      'i8',
       'if',
       'import',
       'in',
@@ -205,11 +207,11 @@ module.exports = grammar({
       'struct',
       'then',
       'transition',
-      'u8',
+      'u128',
       'u16',
       'u32',
       'u64',
-      'u128',
+      'u8',
     ),
 
     decimal_digit: $ =>  /[0-9]/,
@@ -402,6 +404,34 @@ module.exports = grammar({
       "(",
       ")"
     ),
+    
+    untyped_future_type: $ => 'Future',
+    
+    typed_future_type: $ => seq(
+      $.untyped_future_type,
+      "<",
+      "Fn",
+      "(",
+      optional(
+        seq(
+          $.type,
+          repeat1(
+            seq(
+              ",",
+              $.type
+            ),
+          ),
+          optional(","),
+        ),
+      ),
+      ")",
+      ">",
+    ),
+    
+    future_type: $ => choice(
+      $.untyped_future_type,
+      $.typed_future_type
+    ),
 
     record_type: $ => choice(
       seq(
@@ -426,14 +456,15 @@ module.exports = grammar({
 
 
     named_type: $=> choice(
+      $.address_type,
       $.boolean_type,
-      $.integer_type,
       $.field_type,
       $.group_type,
+      $.integer_type,
       $.scalar_type,
-      $.address_type,
       $.signature_type,
-      $.record_type,
+      $.untyped_future_type,
+      $.identifier,
     ),
 
     tuple_type: $ => seq(
@@ -470,6 +501,7 @@ module.exports = grammar({
       $.signature_type,
       $.record_type,
       $.unit_type,
+      $.future_type,
       $.tuple_type,
       $.array_type,
     ),

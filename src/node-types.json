@@ -19181,6 +19181,25 @@
     }
   },
   {
+    "type": "future_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "typed_future_type",
+          "named": true
+        },
+        {
+          "type": "untyped_future_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "group_coordinate",
     "named": true,
     "fields": {}
@@ -26449,11 +26468,11 @@
           "named": true
         },
         {
-          "type": "integer_type",
+          "type": "identifier",
           "named": true
         },
         {
-          "type": "record_type",
+          "type": "integer_type",
           "named": true
         },
         {
@@ -26462,6 +26481,10 @@
         },
         {
           "type": "signature_type",
+          "named": true
+        },
+        {
+          "type": "untyped_future_type",
           "named": true
         }
       ]
@@ -43489,6 +43512,10 @@
           "named": true
         },
         {
+          "type": "future_type",
+          "named": true
+        },
+        {
           "type": "group_type",
           "named": true
         },
@@ -43524,6 +43551,25 @@
     }
   },
   {
+    "type": "typed_future_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "untyped_future_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "unit_expression",
     "named": true,
     "fields": {}
@@ -43540,6 +43586,11 @@
   },
   {
     "type": "unsigned_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "untyped_future_type",
     "named": true,
     "fields": {}
   },
@@ -46093,6 +46144,14 @@
   },
   {
     "type": "@",
+    "named": false
+  },
+  {
+    "type": "Fn",
+    "named": false
+  },
+  {
+    "type": "Future",
     "named": false
   },
   {
