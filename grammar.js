@@ -198,6 +198,7 @@ module.exports = grammar({
       'inline',
       'let',
       'mapping',
+      'network',
       'private',
       'program',
       'public',
@@ -655,6 +656,14 @@ module.exports = grammar({
       )
     ),
 
+    self_address: $ => prec(PREC.OBJ_ACCESS,
+      seq(
+        'self',
+        '.',
+        'address'
+      )
+    ),
+
     self_caller: $ => prec(PREC.OBJ_ACCESS,
       seq(
         'self',
@@ -679,6 +688,14 @@ module.exports = grammar({
       )
     ),
 
+    network_id: $ => prec(PREC.OBJ_ACCESS,
+      seq(
+      'network',
+      '.',
+      'id'
+      )
+    ),
+
     _postfix_expression: $ => choice(
       $.unsigned_literal,
       $.signed_literal,
@@ -699,9 +716,11 @@ module.exports = grammar({
       $.tuple_expression,
       $.array_expression,
       $.struct_expression,
+      $.self_address,
       $.self_caller,
       $.self_signer,
       $.block_height,
+      $.network_id,
       $.tuple_component_expression,
       $.struct_component_expression,
       $.method_call
@@ -754,9 +773,11 @@ module.exports = grammar({
       $.tuple_expression,
       $.array_expression,
       $.struct_expression,
+      $.self_address,
       $.self_caller,
       $.self_signer,
       $.block_height,
+      $.network_id,
       $.tuple_component_expression,
       $.struct_component_expression,
       $.method_call,
