@@ -30779,7 +30779,7 @@
           "named": true
         },
         {
-          "type": "this_program_id",
+          "type": "program_id",
           "named": true
         }
       ]
@@ -30794,7 +30794,7 @@
         "required": true,
         "types": [
           {
-            "type": "leo_literal",
+            "type": "aleo_literal",
             "named": true
           }
         ]
@@ -41181,32 +41181,6 @@
     "fields": {}
   },
   {
-    "type": "this_program_id",
-    "named": true,
-    "fields": {
-      "extension": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "aleo_literal",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "program_name_literal",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "transition_declaration",
     "named": true,
     "fields": {
@@ -49287,10 +49261,6 @@
   {
     "type": "inline",
     "named": false
-  },
-  {
-    "type": "leo_literal",
-    "named": true
   },
   {
     "type": "let",

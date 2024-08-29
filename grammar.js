@@ -365,17 +365,11 @@ module.exports = grammar({
       )
     ),
 
-    this_program_id: $ => seq(
-      field('name',$.program_name_literal),
-      '.',
-      field('extension',$.aleo_literal),
-    ),
-
     program_id: $ => prec(PREC.GROUP_LITERAL,
       seq(
         field('name',$.program_name_literal),
         '.',
-        field('extension',$.leo_literal),
+        field('extension',$.aleo_literal),
       )
     ),
 
@@ -1188,7 +1182,7 @@ module.exports = grammar({
     items_block: $ => seq('{', repeat($.program_item), '}'),
 
     program_declaration: $ => seq(
-      'program', $.this_program_id, $.items_block
+      'program', $.program_id, $.items_block
     ),
 
     import_declaration: $ => seq(
