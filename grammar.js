@@ -17,10 +17,11 @@ const PREC = {
   ADD: 12,         // +  -
   MULT: 13,        // *  /  %
   EXP: 14,         // **
-  UNARY: 15,       // ! -
-  PARENS: 16,      // (Expression)
-  OBJ_ACCESS: 17,  // .
-  GROUP_LITERAL: 18// (1,1)group
+  CAST: 15,
+  UNARY: 16,       // ! -
+  PARENS: 17,      // (Expression)
+  OBJ_ACCESS: 18,  // .
+  GROUP_LITERAL: 19// (1,1)group
 };
 
 module.exports = grammar({
@@ -789,10 +790,10 @@ module.exports = grammar({
           )
         )
       ),
-      prec.left(PREC.EXP,
+      prec.left(PREC.CAST,
         field(
           'cast_expression',
-          seq($._expression, '**', $._named_primitive_type)
+          seq($._expression, 'as', $._named_primitive_type)
         )
       ),
       prec.left(PREC.EXP,

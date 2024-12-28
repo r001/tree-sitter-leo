@@ -1110,7 +1110,7 @@
     },
     "program_id": {
       "type": "PREC",
-      "value": 18,
+      "value": 19,
       "content": {
         "type": "SEQ",
         "members": [
@@ -1639,7 +1639,7 @@
     },
     "affine_group_literal": {
       "type": "PREC",
-      "value": 18,
+      "value": 19,
       "content": {
         "type": "SEQ",
         "members": [
@@ -1719,7 +1719,7 @@
     },
     "free_function_call": {
       "type": "PREC",
-      "value": 18,
+      "value": 19,
       "content": {
         "type": "CHOICE",
         "members": [
@@ -1999,7 +1999,7 @@
     },
     "self_address": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2020,7 +2020,7 @@
     },
     "self_caller": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2041,7 +2041,7 @@
     },
     "self_signer": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2062,7 +2062,7 @@
     },
     "block_height": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2083,7 +2083,7 @@
     },
     "network_id": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2230,7 +2230,7 @@
     },
     "tuple_component_expression": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2251,7 +2251,7 @@
     },
     "struct_component_expression": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2272,7 +2272,7 @@
     },
     "method_call": {
       "type": "PREC",
-      "value": 17,
+      "value": 18,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2365,7 +2365,7 @@
         },
         {
           "type": "PREC",
-          "value": 16,
+          "value": 17,
           "content": {
             "type": "SYMBOL",
             "name": "parenthesized_expression"
@@ -2429,7 +2429,7 @@
         },
         {
           "type": "PREC_RIGHT",
-          "value": 15,
+          "value": 16,
           "content": {
             "type": "FIELD",
             "name": "unary_expression",
@@ -2468,7 +2468,7 @@
         },
         {
           "type": "PREC_LEFT",
-          "value": 14,
+          "value": 15,
           "content": {
             "type": "FIELD",
             "name": "cast_expression",
@@ -2481,7 +2481,7 @@
                 },
                 {
                   "type": "STRING",
-                  "value": "**"
+                  "value": "as"
                 },
                 {
                   "type": "SYMBOL",
