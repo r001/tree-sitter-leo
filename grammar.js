@@ -172,6 +172,7 @@ module.exports = grammar({
     keyword: $ => choice(
       'Future',
       'address',
+      'as',
       'assert',
       'assert_eq',
       'assert_neq',
@@ -469,15 +470,19 @@ module.exports = grammar({
     ),
 
 
-    named_type: $=> choice(
-      $.address_type,
+    _named_primitive_type: $ => choice(
       $.boolean_type,
+      $.integer_type,
       $.field_type,
       $.group_type,
-      $.integer_type,
       $.scalar_type,
+      $.address_type,
       $.signature_type,
       $.string_type,
+      ),
+
+    named_type: $=> choice(
+      $._named_primitive_type,
       $.untyped_future_type,
       $.identifier,
     ),
@@ -782,6 +787,12 @@ module.exports = grammar({
             seq('!', $._expression),
             seq('-', $._expression),
           )
+        )
+      ),
+      prec.left(PREC.EXP,
+        field(
+          'cast_expression',
+          seq($._expression, '**', $._named_primitive_type)
         )
       ),
       prec.left(PREC.EXP,
