@@ -370,193 +370,196 @@
       ]
     },
     "keyword": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "Future"
-        },
-        {
-          "type": "STRING",
-          "value": "address"
-        },
-        {
-          "type": "STRING",
-          "value": "as"
-        },
-        {
-          "type": "STRING",
-          "value": "assert"
-        },
-        {
-          "type": "STRING",
-          "value": "assert_eq"
-        },
-        {
-          "type": "STRING",
-          "value": "assert_neq"
-        },
-        {
-          "type": "STRING",
-          "value": "async"
-        },
-        {
-          "type": "STRING",
-          "value": "block"
-        },
-        {
-          "type": "STRING",
-          "value": "bool"
-        },
-        {
-          "type": "STRING",
-          "value": "console"
-        },
-        {
-          "type": "STRING",
-          "value": "const"
-        },
-        {
-          "type": "STRING",
-          "value": "constant"
-        },
-        {
-          "type": "STRING",
-          "value": "else"
-        },
-        {
-          "type": "STRING",
-          "value": "field"
-        },
-        {
-          "type": "STRING",
-          "value": "finalize"
-        },
-        {
-          "type": "STRING",
-          "value": "for"
-        },
-        {
-          "type": "STRING",
-          "value": "function"
-        },
-        {
-          "type": "STRING",
-          "value": "group"
-        },
-        {
-          "type": "STRING",
-          "value": "i128"
-        },
-        {
-          "type": "STRING",
-          "value": "i16"
-        },
-        {
-          "type": "STRING",
-          "value": "i32"
-        },
-        {
-          "type": "STRING",
-          "value": "i64"
-        },
-        {
-          "type": "STRING",
-          "value": "i8"
-        },
-        {
-          "type": "STRING",
-          "value": "if"
-        },
-        {
-          "type": "STRING",
-          "value": "import"
-        },
-        {
-          "type": "STRING",
-          "value": "in"
-        },
-        {
-          "type": "STRING",
-          "value": "inline"
-        },
-        {
-          "type": "STRING",
-          "value": "let"
-        },
-        {
-          "type": "STRING",
-          "value": "mapping"
-        },
-        {
-          "type": "STRING",
-          "value": "network"
-        },
-        {
-          "type": "STRING",
-          "value": "private"
-        },
-        {
-          "type": "STRING",
-          "value": "program"
-        },
-        {
-          "type": "STRING",
-          "value": "public"
-        },
-        {
-          "type": "STRING",
-          "value": "record"
-        },
-        {
-          "type": "STRING",
-          "value": "return"
-        },
-        {
-          "type": "STRING",
-          "value": "scalar"
-        },
-        {
-          "type": "STRING",
-          "value": "self"
-        },
-        {
-          "type": "STRING",
-          "value": "string"
-        },
-        {
-          "type": "STRING",
-          "value": "struct"
-        },
-        {
-          "type": "STRING",
-          "value": "then"
-        },
-        {
-          "type": "STRING",
-          "value": "transition"
-        },
-        {
-          "type": "STRING",
-          "value": "u128"
-        },
-        {
-          "type": "STRING",
-          "value": "u16"
-        },
-        {
-          "type": "STRING",
-          "value": "u32"
-        },
-        {
-          "type": "STRING",
-          "value": "u64"
-        },
-        {
-          "type": "STRING",
-          "value": "u8"
-        }
-      ]
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "Future"
+          },
+          {
+            "type": "STRING",
+            "value": "address"
+          },
+          {
+            "type": "STRING",
+            "value": "as"
+          },
+          {
+            "type": "STRING",
+            "value": "assert"
+          },
+          {
+            "type": "STRING",
+            "value": "assert_eq"
+          },
+          {
+            "type": "STRING",
+            "value": "assert_neq"
+          },
+          {
+            "type": "STRING",
+            "value": "async"
+          },
+          {
+            "type": "STRING",
+            "value": "block"
+          },
+          {
+            "type": "STRING",
+            "value": "bool"
+          },
+          {
+            "type": "STRING",
+            "value": "console"
+          },
+          {
+            "type": "STRING",
+            "value": "const"
+          },
+          {
+            "type": "STRING",
+            "value": "constant"
+          },
+          {
+            "type": "STRING",
+            "value": "else"
+          },
+          {
+            "type": "STRING",
+            "value": "field"
+          },
+          {
+            "type": "STRING",
+            "value": "finalize"
+          },
+          {
+            "type": "STRING",
+            "value": "for"
+          },
+          {
+            "type": "STRING",
+            "value": "function"
+          },
+          {
+            "type": "STRING",
+            "value": "group"
+          },
+          {
+            "type": "STRING",
+            "value": "i128"
+          },
+          {
+            "type": "STRING",
+            "value": "i16"
+          },
+          {
+            "type": "STRING",
+            "value": "i32"
+          },
+          {
+            "type": "STRING",
+            "value": "i64"
+          },
+          {
+            "type": "STRING",
+            "value": "i8"
+          },
+          {
+            "type": "STRING",
+            "value": "if"
+          },
+          {
+            "type": "STRING",
+            "value": "import"
+          },
+          {
+            "type": "STRING",
+            "value": "in"
+          },
+          {
+            "type": "STRING",
+            "value": "inline"
+          },
+          {
+            "type": "STRING",
+            "value": "let"
+          },
+          {
+            "type": "STRING",
+            "value": "mapping"
+          },
+          {
+            "type": "STRING",
+            "value": "network"
+          },
+          {
+            "type": "STRING",
+            "value": "private"
+          },
+          {
+            "type": "STRING",
+            "value": "program"
+          },
+          {
+            "type": "STRING",
+            "value": "public"
+          },
+          {
+            "type": "STRING",
+            "value": "record"
+          },
+          {
+            "type": "STRING",
+            "value": "return"
+          },
+          {
+            "type": "STRING",
+            "value": "scalar"
+          },
+          {
+            "type": "STRING",
+            "value": "self"
+          },
+          {
+            "type": "STRING",
+            "value": "string"
+          },
+          {
+            "type": "STRING",
+            "value": "struct"
+          },
+          {
+            "type": "STRING",
+            "value": "then"
+          },
+          {
+            "type": "STRING",
+            "value": "transition"
+          },
+          {
+            "type": "STRING",
+            "value": "u128"
+          },
+          {
+            "type": "STRING",
+            "value": "u16"
+          },
+          {
+            "type": "STRING",
+            "value": "u32"
+          },
+          {
+            "type": "STRING",
+            "value": "u64"
+          },
+          {
+            "type": "STRING",
+            "value": "u8"
+          }
+        ]
+      }
     },
     "decimal_digit": {
       "type": "PATTERN",

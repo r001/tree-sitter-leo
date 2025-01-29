@@ -16012,11 +16012,6 @@
     "fields": {}
   },
   {
-    "type": "boolean_type",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "branch",
     "named": true,
     "fields": {},
@@ -42229,11 +42224,6 @@
     }
   },
   {
-    "type": "string_type",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "struct_component_declaration",
     "named": true,
     "fields": {},
@@ -58383,11 +58373,6 @@
     "fields": {}
   },
   {
-    "type": "untyped_future_type",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "variable",
     "named": true,
     "fields": {},
@@ -61761,10 +61746,6 @@
     "named": false
   },
   {
-    "type": "Future",
-    "named": false
-  },
-  {
     "type": "[",
     "named": false
   },
@@ -61821,8 +61802,8 @@
     "named": false
   },
   {
-    "type": "bool",
-    "named": false
+    "type": "boolean_type",
+    "named": true
   },
   {
     "type": "caller",
@@ -61985,8 +61966,8 @@
     "named": true
   },
   {
-    "type": "string",
-    "named": false
+    "type": "string_type",
+    "named": true
   },
   {
     "type": "struct",
@@ -62023,6 +62004,10 @@
   {
     "type": "u8",
     "named": false
+  },
+  {
+    "type": "untyped_future_type",
+    "named": true
   },
   {
     "type": "visible_ascii",

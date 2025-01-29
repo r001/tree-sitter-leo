@@ -170,7 +170,7 @@ module.exports = grammar({
       $.safe_nonascii
     ),
 
-    keyword: $ => choice(
+    keyword: $ => token(choice(
       'Future',
       'address',
       'as',
@@ -217,7 +217,7 @@ module.exports = grammar({
       'u32',
       'u64',
       'u8',
-    ),
+    )),
 
     decimal_digit: $ =>  /[0-9]/,
 
